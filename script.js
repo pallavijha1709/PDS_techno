@@ -11,7 +11,7 @@ navButtons.forEach(btn => {
 });
 
 // Replace with your backend ngrok URL
-const BASE_URL = "YOUR_NGROK_URL";
+const BASE_URL = "http://127.0.0.1:5000/";
 
 // Suspicious Shops
 const shopsList = document.getElementById("shops-list");
