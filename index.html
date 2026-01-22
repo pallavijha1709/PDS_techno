@@ -1,75 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="UTF-8">
-    <title>frontend techno</title>
-    <link rel="stylesheet" href="./style.css">
-
-  </head>
-    
-  <body>
-  <!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PDS Monitoring Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>PDS Analytics Dashboard</title>
+  <!-- Imported Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>PDS Intelligent Monitoring System</h1>
+    <h1>🌐 PDS Analytics Dashboard</h1>
     <nav>
-      <button class="nav-btn" data-page="main">Home</button>
-      <button class="nav-btn" data-page="shops">Suspicious Shops</button>
-      <button class="nav-btn" data-page="beneficiaries">Suspicious Beneficiaries</button>
-      <button class="nav-btn" data-page="prediction">Future Prediction</button>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#shops">Shops</a></li>
+        <li><a href="#beneficiaries">Beneficiaries</a></li>
+        <li><a href="#reports">Reports</a></li>
+      </ul>
     </nav>
   </header>
 
-  <main>
-    <!-- Main Page -->
-    <section id="main" class="page active">
-      <h2>Public Distribution System (PDS)</h2>
-      <p>
-        The Public Distribution System (PDS) is a national program in India aimed at providing essential commodities
-        like food grains, sugar, and kerosene at subsidized rates to eligible beneficiaries. It ensures equitable
-        distribution and monitors ration distribution to prevent leakage and misuse.
-      </p>
-      <p>
-        Our AI-enabled monitoring system detects suspicious shops and beneficiaries, predicts future anomalies,
-        calculates risk scores, and helps authorities maintain transparency and efficiency in the PDS.
-      </p>
-    </section>
+  <section id="overview" class="container">
+    <h2>System Overview</h2>
+    <p>Transparent monitoring of ration distribution with anomaly detection and risk scoring.</p>
+    <button id="popupBtn">Show Info</button>
+  </section>
 
-    <!-- Suspicious Shops -->
-    <section id="shops" class="page">
-      <h2>Suspicious Shops</h2>
-      <ul id="shops-list"></ul>
-    </section>
+  <section id="shops" class="container">
+    <h2>🚨 Suspicious Shops</h2>
+    <div id="shop-list"></div>
+  </section>
 
-    <!-- Suspicious Beneficiaries -->
-    <section id="beneficiaries" class="page">
-      <h2>Suspicious Beneficiaries</h2>
-      <ul id="beneficiaries-list"></ul>
-    </section>
+  <section id="beneficiaries" class="container">
+    <h2>👥 Suspicious Beneficiaries</h2>
+    <div id="beneficiary-list"></div>
+  </section>
 
-    <!-- Future Prediction -->
-    <section id="prediction" class="page">
-      <h2>Future Distribution Prediction</h2>
-      <input type="number" id="beneficiary-input" placeholder="Enter beneficiary count" />
-      <button id="predict-btn">Predict</button>
-      <p id="prediction-output"></p>
-    </section>
-  </main>
+  <section id="reports" class="container">
+    <h2>📊 Reports</h2>
+    <canvas id="chart"></canvas>
+  </section>
 
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>ℹ️ Dashboard Info</h2>
+      <p>This dashboard highlights anomalies in ration distribution with risk scoring and transparency.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 PDS Transparency Initiative | Designed with ⚡ Professional Touch</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
-</html>
-    <script  src="./script.js"></script>
-
-  </body>
-  
 </html>
