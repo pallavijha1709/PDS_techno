@@ -3,59 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PDS Analytics Dashboard</title>
-  <!-- Imported Google Font -->
+  <title>PDS Transparency Portal</title>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Task Bar -->
   <header>
-    <h1>🌐 PDS Analytics Dashboard</h1>
+    <h1>🌐 PDS Transparency Portal</h1>
     <nav>
       <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#shops">Shops</a></li>
-        <li><a href="#beneficiaries">Beneficiaries</a></li>
-        <li><a href="#reports">Reports</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shops.html">Suspicious Shops</a></li>
+        <li><a href="beneficiaries.html">Beneficiaries</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="overview" class="container">
-    <h2>System Overview</h2>
-    <p>Transparent monitoring of ration distribution with anomaly detection and risk scoring.</p>
-    <button id="popupBtn">Show Info</button>
+  <!-- Home Content -->
+  <section class="container">
+    <h2>About the Public Distribution System (PDS)</h2>
+    <p>
+      The Public Distribution System (PDS) is a vital program in India that ensures food security 
+      for millions of citizens. Through a network of fair‑price shops, essential commodities such 
+      as rice, wheat, sugar, and kerosene are distributed at subsidized rates. The system plays a 
+      crucial role in supporting vulnerable communities and reducing hunger.
+    </p>
+    <p>
+      Transparency and accountability are key to the success of PDS. This portal provides 
+      authorities and citizens with tools to monitor ration distribution, detect anomalies, 
+      and ensure fairness in the system.
+    </p>
+    <h3>📞 Helpline Numbers for Beneficiaries</h3>
+    <ul>
+      <li>National Food Security Helpline: <strong>1800‑180‑2087</strong></li>
+      <li>State PDS Helpline (Tamil Nadu): <strong>1800‑425‑5901</strong></li>
+      <li>Grievance Redressal: <strong>1967</strong></li>
+    </ul>
   </section>
-
-  <section id="shops" class="container">
-    <h2>🚨 Suspicious Shops</h2>
-    <div id="shop-list"></div>
-  </section>
-
-  <section id="beneficiaries" class="container">
-    <h2>👥 Suspicious Beneficiaries</h2>
-    <div id="beneficiary-list"></div>
-  </section>
-
-  <section id="reports" class="container">
-    <h2>📊 Reports</h2>
-    <canvas id="chart"></canvas>
-  </section>
-
-  <!-- Popup Modal -->
-  <div id="popup" class="popup">
-    <div class="popup-content">
-      <span class="close">&times;</span>
-      <h2>ℹ️ Dashboard Info</h2>
-      <p>This dashboard highlights anomalies in ration distribution with risk scoring and transparency.</p>
-    </div>
-  </div>
 
   <footer>
     <p>© 2026 PDS Transparency Initiative | Designed with ⚡ Professional Touch</p>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
