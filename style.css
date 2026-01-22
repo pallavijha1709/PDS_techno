@@ -1,4 +1,3 @@
-/* Global Styles */
 body {
   font-family: 'Orbitron', sans-serif;
   margin: 0;
@@ -53,86 +52,10 @@ nav a:hover {
   transform: scale(1.02);
 }
 
-button {
-  background: #00aaff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #00aaff;
-}
-
-.card {
-  background: rgba(255,255,255,0.1);
-  margin: 15px 0;
-  padding: 15px;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #00aaff;
-}
-
-.risk-high { color: #ff4d4d; font-weight: bold; text-shadow: 0 0 10px #ff4d4d; }
-.risk-medium { color: #ffd633; font-weight: bold; text-shadow: 0 0 10px #ffd633; }
-.risk-low { color: #33cc33; font-weight: bold; text-shadow: 0 0 10px #33cc33; }
-
 footer {
   text-align: center;
   padding: 15px;
   background: #0a0a0a;
   margin-top: 40px;
   box-shadow: 0 -5px 20px #00aaff;
-}
-
-/* Popup Modal */
-.popup {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-}
-
-.popup-content {
-  background: #0a1f44;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 12px;
-  width: 60%;
-  box-shadow: 0 0 20px #00aaff;
-  animation: fadeIn 0.5s ease;
-}
-
-.popup-content h2 {
-  color: #00aaff;
-  text-shadow: 0 0 10px #00aaff;
-}
-
-.close {
-  color: #ffffff;
-  float: right;
-  font-size: 28px;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-.close:hover {
-  color: #ff4d4d;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {opacity: 0; transform: scale(0.9);}
-  to {opacity: 1; transform: scale(1);}
 }
