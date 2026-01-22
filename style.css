@@ -1,0 +1,287 @@
+/* ================================
+   Base Styles
+   ================================ */
+body {
+  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #000000, #0a1f44);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ================================
+   Header & Navigation
+   ================================ */
+header {
+  background: #0a0a0a;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px #00aaff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-shadow: 0 0 12px #00aaff;
+}
+
+nav ul {
+  list-style: none;
+  margin: 15px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+/* ================================
+   Content Containers
+   ================================ */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(0,170,255,0.5);
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02);
+}
+
+/* ================================
+   Cards
+   ================================ */
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00aaff;
+}
+
+/* ================================
+   Risk Indicators
+   ================================ */
+.risk-high {
+  color: #ff4d4d;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ff4d4d;
+}
+
+.risk-medium {
+  color: #ffd633;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ffd633;
+}
+
+.risk-low {
+  color: #33cc33;
+  font-weight: bold;
+  text-shadow: 0 0 10px #33cc33;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+button,
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button,
+.btn-primary {
+  background: #00aaff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(0,170,255,0.35);
+}
+
+button:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #00aaff;
+}
+
+/* ================================
+   Footer
+   ================================ */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #0a0a0a;
+  margin-top: 40px;
+  box-shadow: 0 -5px 20px #00aaff;
+}
+
+/* ================================
+   Popup Modal
+   ================================ */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.popup-content {
+  background: #0a1f44;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 70%;
+  max-width: 600px;
+  box-shadow: 0 0 20px #00aaff;
+  animation: fadeIn 0.5s ease;
+}
+
+.popup-content h2 {
+  color: #00aaff;
+  text-shadow: 0 0 10px #00aaff;
+}
+
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close:hover {
+  color: #ff4d4d;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* ================================
+   Contact Page
+   ================================ */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 24px;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 16px rgba(0,170,255,0.35);
+}
+
+.contact-card h3 {
+  margin-top: 0;
+  color: #00aaff;
+  text-shadow: 0 0 8px #00aaff;
+}
+
+.contact-form .form-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.contact-form label {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(0,170,255,0.35);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  outline: none;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #cfe9ff;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #00aaff;
+  box-shadow: 0 0 12px #00aaff;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.form-status {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #ffd633;
+}
+
+.helpline-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.helpline-list li {
+  margin-bottom: 8px;
+}
+
+/* ================================
+   Responsive Design
+   ================================ */
+@media (max-width: 900px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .popup-content {
+    width: 90%;
+  }
+}
